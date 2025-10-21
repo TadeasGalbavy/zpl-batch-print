@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zpl-batch-print"
+version = "0.1.0"
+description = "Tkinter app na dávkovú tlač ZPL/PRN zo zoznamu v Exceli"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Tadeáš Galbavý" }]
+license = { text = "MIT" }
+dependencies = [
+    "pandas",
+    'pywin32; platform_system == "Windows"',
+]
+
+[project.scripts]
+zpl-print = "zpl_batch_print.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
