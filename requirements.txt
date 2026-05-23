@@ -1,3 +1,0 @@
-pandas
-# pywin32 je potrebné len pre Windows/USB tlač:
-pywin32; platform_system == "Windows"
