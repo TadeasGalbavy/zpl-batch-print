@@ -1,8 +1,35 @@
+# === Python bytecode a cache ===
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+
+# === Virtuálne prostredia ===
 .venv/
+venv/
+env/
+ENV/
+
+# === Distribúcia a balíčky ===
 dist/
 build/
+*.egg-info/
 *.spec
+
+# === Vývojárske prostredia (IDEs) ===
 .vscode/
 .idea/
+*.swp
+*.suo
+
+# === Konfigurácie a citlivé dáta (API kľúče, heslá) ===
+.env
+*.env
+.env.local
+
+# === Systémový odpad ===
+.DS_Store
+Thumbs.db
