@@ -1,4 +1,4 @@
-# 🏷️ Tlač štítkov — Label Print Automation
+<img width="977" height="715" alt="image_no_file" src="https://github.com/user-attachments/assets/1ea3160f-f2de-4584-b0af-13d5f5ca25b6" /># 🏷️ Tlač štítkov — Label Print Automation
 
 Desktopová aplikácia na hromadnú tlač ZPL štítkov na Zebra tlačiarni.  
 Nahrádza manuálny proces — **šetrí 5–7 hodín práce týždenne**.
@@ -64,9 +64,9 @@ FIXED_PRN_DIR = r"path_to_DB"   # zmeň na skutočnú cestu, napr. sieťový dis
 
 ## Popis UI
 
-<!-- tu vlož screenshot aplikácie -->
+**Simulačný režim** - prechádza celým procesom (načíta Excel, nájde súbory, upraví ZPL), ale nič neposiela na tlačiareň. Ideálne na testovanie pred ostrým spustením.
 
-**Simulačný režim** — prechádza celým procesom (načíta Excel, nájde súbory, upraví ZPL), ale nič neposiela na tlačiareň. Ideálne na testovanie pred ostrým spustením.
+**imgs** - mrkni zložku imgs pre UI
 
 ---
 
