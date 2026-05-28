@@ -1,7 +1,7 @@
-<img width="977" height="715" alt="image_no_file" src="https://github.com/user-attachments/assets/1ea3160f-f2de-4584-b0af-13d5f5ca25b6" /># 🏷️ Tlač štítkov — Label Print Automation
+# Tlač štítkov - Label Print Automation
 
 Desktopová aplikácia na hromadnú tlač ZPL štítkov na Zebra tlačiarni.  
-Nahrádza manuálny proces — **šetrí 5–7 hodín práce týždenne**.
+Nahrádza manuálny proces - **šetrí 5–7 hodín práce týždenne**.
 
 ---
 
@@ -12,7 +12,7 @@ Pred nasadením: operátor musel otvárať každý `.prn` súbor zvlášť, nast
 Po nasadení: stačí vyplniť Excel s dvoma stĺpcami, vybrať súbor v aplikácii a kliknúť „Spustiť tlač". Zvyšok ide automaticky.
 
 **Tok:**
-1. Operátor vyplní Excel — názov šablóny štítka + počet kusov
+1. Operátor vyplní Excel - názov šablóny štítka + počet kusov
 2. Aplikácia načíta zoznam, nájde `.prn` súbory na zdieľanom disku
 3. Do každého ZPL súboru vloží správne množstvo (`^PQ` príkaz)
 4. Odošle tlačové úlohy priamo na Zebra tlačiareň cez Windows spooler
@@ -39,8 +39,8 @@ pip install pandas openpyxl pywin32
 
 Aplikácia očakáva jednoduchý Excel bez špeciálnych požiadaviek na názov listu.
 
-- **Stĺpec A** — názov `.prn` súboru (iba názov súboru, nie celá cesta)
-- **Stĺpec B** — počet kusov (celé číslo)
+- **Stĺpec A** - názov `.prn` súboru (iba názov súboru, nie celá cesta)
+- **Stĺpec B** - počet kusov (celé číslo)
 - Prázdne riadky sú automaticky ignorované
 
 Príklad:
@@ -74,10 +74,10 @@ FIXED_PRN_DIR = r"path_to_DB"   # zmeň na skutočnú cestu, napr. sieťový dis
 
 Každý krok je viditeľný v log okne priamo v aplikácii:
 
-- `OK: nazov.prn × 10` — úspešne odoslaná tlačová úloha
-- `SKIP: Nenájdené: ...` — `.prn` súbor neexistuje v zložke
-- `CHYBA pri ...` — technická chyba pri konkrétnom súbore
-- Na konci: súhrn — spracované / preskočené / celkový počet štítkov
+- `OK: nazov.prn × 10` - úspešne odoslaná tlačová úloha
+- `SKIP: Nenájdené: ...` - `.prn` súbor neexistuje v zložke
+- `CHYBA pri ...` - technická chyba pri konkrétnom súbore
+- Na konci: súhrn - spracované / preskočené / celkový počet štítkov
 
 ---
 
@@ -99,13 +99,13 @@ Každý krok je viditeľný v log okne priamo v aplikácii:
 
 ## Technické poznámky
 
-- ZPL príkaz `^PQ` riadi počet kópií — aplikácia ho automaticky vloží alebo prepíše ak už v súbore existuje.
+- ZPL príkaz `^PQ` riadi počet kópií - aplikácia ho automaticky vloží alebo prepíše ak už v súbore existuje.
 - Kódovanie `.prn` súborov: `latin-1` (štandard pre staršie ZPL šablóny).
-- Tlač prebieha v samostatnom vlákne — UI počas tlače nezamrzne.
+- Tlač prebieha v samostatnom vlákne - UI počas tlače nezamrzne.
 
 ---
 
 ## Autor
 
-Tadeáš Galbavý — interná automatizácia, Medical Uniforms  
+Tadeáš Galbavý - interná automatizácia, Medical Uniforms  
 Projekt vznikol ako náhrada manuálneho procesu s úsporou 5–7 hodín/týždeň.
